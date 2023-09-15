@@ -18,11 +18,6 @@ class MovieSerializer(serializers.ModelSerializer):
         model = Movie
         fields = "__all__"
 
-    def create(self, validated_data):
-        movie = Movie.objects.create(**validated_data)
-
-        return post
-
     def to_representation(self, instance):
         rep = super().to_representation(instance)
         rep["like_count"] = instance.likes.filter(is_like=True).count()
