@@ -49,7 +49,7 @@ INSTALLED_APPS = [
 
     # apps
     'applications.account',
-    'applications.post',
+    'applications.movie',
 ]
 
 MIDDLEWARE = [
